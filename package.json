@@ -1,6 +1,6 @@
 {
   "name": "mac-window-select",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prompt the user to select a window on macOS, mimicking the native screenshot utility",
   "main": "index.js",
   "repository": "https://github.com/karaggeorge/mac-window-select",
