@@ -1,6 +1,6 @@
 # mac-window-select
 
-> Select a window on macOS, mimicking the native screenshot utility
+> Prompt the user to select a window on macOS, mimicking the native screenshot utility
 
 Requires macOS 10.12 or later. macOS 10.13 or earlier needs to download the [Swift runtime support libraries](https://download.developer.apple.com/Developer_Tools/Swift_5_Runtime_Support_for_Command_Line_Tools/Swift_5_Runtime_Support_for_Command_Line_Tools.dmg).
 
@@ -63,9 +63,18 @@ Array of app names to ignore. If an app is in this list, it will be ignored and 
 
 Note: Use this if you want your own app to not be selectable
 
+### `selectWindow.isSupported`
+
+Will be `true` if the module is supported (based on macOS version).
+
 ## Limitations
 
 Currently, there's no way to track the keyboard events, since the script never steals focus from the previously focused app. If you want Escape to cancel, you have to track it in your app and call the `cancel()` method on the returned promise.
+
+## Related
+
+- [mac-focus-window](https://github.com/karaggeorge/mac-focus-window) - Focus a window and bring it to the front on macOS
+- [mac-windows](https://github.com/karaggeorge/mac-windows) - Provide Information about Application Windows running
 
 ## License
 

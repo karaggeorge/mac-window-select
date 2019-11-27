@@ -36,3 +36,5 @@ module.exports = ({appsToIgnore} = {appsToIgnore: []}) => new PCancelable(async 
 		}
 	}
 });
+
+module.exports.isSupported = isSupported;
