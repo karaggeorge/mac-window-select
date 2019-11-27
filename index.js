@@ -32,7 +32,7 @@ module.exports = ({appsToIgnore} = {appsToIgnore: []}) => new PCancelable(async 
 		if (error.isCanceled || error.stdout === 'canceled') {
 			resolve({canceled: true, window: undefined});
 		} else {
-			reject(error)
+			reject(error);
 		}
 	}
 });
