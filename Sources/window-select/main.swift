@@ -1,23 +1,24 @@
 import Cocoa
 import SwiftCLI
 
-class SelectCommand: Command {
+final class SelectCommand: Command {
     let name = "select"
 
     let appsToIgnore = VariadicKey<String>("-i", "--ignore", description: "List of app names to ignore")
-    let useJson = Flag("-j", "--json", description: "Use json for the output")
+    let useJson = Flag("-j", "--json", description: "Use JSON for the output")
 
     func execute() throws {
-      WindowSelect(
+      _ = WindowSelect(
         appsToIgnore: appsToIgnore.value,
         useJson: useJson.value
       )
 
-      NSApp.delegate = AppDelegate()
+      let delegate = AppDelegate()
+      NSApp.delegate = delegate
       NSApp.run()
     }
 }
 
 let selectWindow = CLI(name: "select-window")
 selectWindow.commands = [SelectCommand()]
-selectWindow.go()
+_ = selectWindow.go()
