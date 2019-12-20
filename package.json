@@ -2,7 +2,6 @@
   "name": "mac-window-select",
   "version": "1.0.1",
   "description": "Prompt the user to select a window on macOS, mimicking the native screenshot utility",
-  "main": "index.js",
   "repository": "https://github.com/karaggeorge/mac-window-select",
   "author": {
     "name": "George Karagkiaouris",
@@ -10,20 +9,19 @@
     "url": "https://gkaragkiaouris.tech"
   },
   "license": "MIT",
-  "private": false,
   "scripts": {
     "test": "xo",
     "build": "swift build --configuration=release && mv .build/release/window-select .",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "electron-util": "^0.12.1",
-    "execa": "^2.0.4",
+    "electron-util": "^0.13.0",
+    "execa": "^3.4.0",
     "macos-version": "^5.2.0",
     "p-cancelable": "^2.0.0"
   },
   "devDependencies": {
-    "xo": "^0.24.0"
+    "xo": "^0.25.3"
   },
   "files": [
     "index.js",
